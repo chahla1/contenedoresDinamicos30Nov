@@ -88,10 +88,14 @@ void ejercicio5() {
 void ejercicio6() {
     cout << "Ejercicio 6: Introducción a Boost" << endl;
     std::string s = "12345";
-
-
-
-
+    try {
+        int i = boost::lexical_cast<int>(s);
+        std::cout << "Número: " << i << std::endl;
+    } catch(boost::bad_lexical_cast &e) {
+        std::cerr << "Error: " << e.what() << std::endl;
+    }
+    cout << endl;
+}
 
 
 
