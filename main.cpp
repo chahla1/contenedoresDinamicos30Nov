@@ -85,6 +85,10 @@ void ejercicio5() {
     cout << endl;
 }
 // Ejercicio 6: Introducción a Boost
+void ejercicio6() {
+    cout << "Ejercicio 6: Introducción a Boost" << endl;
+    std::string s = "12345";
+
 
 
 
