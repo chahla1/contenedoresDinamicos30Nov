@@ -12,10 +12,10 @@ using namespace std;
 
 void ejercicio1() {
     cout << "Ejercicio 1: Vector e Iteradores" << endl;
-    std::vector<int> numeros = {10, 20, 30, 40, 50};
+    vector<int> numeros = {10, 20, 30, 40, 50};
 
-    for(std::vector<int>::iterator it = numeros.begin(); it != numeros.end(); ++it) {
-        std::cout << *it << std::endl;
+    for(vector<int>::iterator it = numeros.begin(); it != numeros.end(); ++it) {
+        cout << *it << endl;
     }
     cout << endl;
 }
@@ -24,11 +24,11 @@ void ejercicio1() {
 
 void ejercicio2() {
     cout << "Ejercicio 2: Contenedores Estándar y Secuencias" << endl;
-    std::list<float> lista = {1.1, 2.2, 3.3, 4.4, 5.5};
-    std::stack<float, std::list<float>> pila(lista);
+    list<float> lista = {1.1, 2.2, 3.3, 4.4, 5.5};
+    stack<float, std::list<float>> pila(lista);
 
     while(!pila.empty()) {
-        std::cout << pila.top() << std::endl;
+        cout << pila.top() << endl;
         pila.pop();
     }
     cout << endl;
@@ -38,17 +38,48 @@ void ejercicio2() {
 
 void ejercicio3() {
     cout << "Ejercicio 3: Algoritmos" << endl;
-    std::vector<int> numeros = {50, 20, 60, 10, 30, 40};
-    std::sort(numeros.begin(), numeros.end());
+    vector<int> numeros = {50, 20, 60, 10, 30, 40};
+    sort(numeros.begin(), numeros.end());
 
     for(int num : numeros) {
         std::cout << num << std::endl;
     }
 
-    int maxNum = *std::max_element(numeros.begin(), numeros.end());
-    std::cout << "Número máximo: " << maxNum << std::endl;
+    int maxNum = *max_element(numeros.begin(), numeros.end());
+    cout << "Número máximo: " << maxNum << endl;
     cout << endl;
 }
+
+// Ejercicio 4: Cálculo numérico
+
+void ejercicio4() {
+    cout << "Ejercicio 4: Cálculo numérico" << endl;
+    valarray<double> valores = {1.0, 2.0, 3.0, 4.0, 5.0};
+
+    cout << "Suma: " << valores.sum() << endl;
+    cout << "Media: " << valores.sum() / valores.size() << endl;
+
+    valores += 5.0;
+
+    cout << "Valores + 5.0: ";
+    for(double valor : valores) {
+        cout << valor << " ";
+    }
+    cout << endl;
+    cout << endl;
+}
+
+// Ejercicio 5: C++ Moderno
+void ejercicio5() {
+    cout << "Ejercicio 5: C++ Moderno" << endl;
+    auto cuadrado = [](int num) { return num * num; };
+
+    cout << "Cuadrado de 5: " << cuadrado(5) << endl;
+
+    vector<int> numeros = {1, 2, 3, 4, 5};
+    for_each(numeros.begin(), numeros.end(), [](int num) {
+        cout << num << endl;
+    });
 
 
 
