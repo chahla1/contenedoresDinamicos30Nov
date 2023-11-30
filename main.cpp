@@ -80,10 +80,11 @@ void ejercicio5() {
     for_each(numeros.begin(), numeros.end(), [](int num) {
         cout << num << endl;
     });
-    std::shared_ptr<int> ptr(new int(10));
-    std::cout << "Valor apuntado por ptr: " << *ptr << std::endl;
+    shared_ptr<int> ptr(new int(10));
+    cout << "Valor apuntado por ptr: " << *ptr << endl;
     cout << endl;
 }
+// Ejercicio 6: Introducción a Boost
 
 
 
