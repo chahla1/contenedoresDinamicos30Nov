@@ -17,6 +17,18 @@ void ejercicio1() {
     }
     cout << endl;
 }
+// Ejercicio 2: Contenedores Estándar y Secuencias
+void ejercicio2() {
+    cout << "Ejercicio 2: Contenedores Estándar y Secuencias" << endl;
+    std::list<float> lista = {1.1, 2.2, 3.3, 4.4, 5.5};
+    std::stack<float, std::list<float>> pila(lista);
+
+    while(!pila.empty()) {
+        std::cout << pila.top() << std::endl;
+        pila.pop();
+    }
+    cout << endl;
+}
 
 
 
